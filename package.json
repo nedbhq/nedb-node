@@ -47,7 +47,7 @@
     "src": "src"
   },
   "dependencies": {
-    "nedb-core": "^3.0.6"
+    "nedb-core": "bullish-ventures/nedb-core"
   },
   "devDependencies": {
     "chai": "^3.5.0",
