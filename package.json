@@ -1,0 +1,58 @@
+{
+  "name": "nedb-node",
+  "description": "NeDB for Node",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bullish-ventures/nedb-node",
+  "main": "lib/",
+  "keywords": [
+    "nedb",
+    "mongodb",
+    "node",
+    "database"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bullish-ventures/nedb-node.git"
+  },
+  "author": {
+    "name": "Bullish Ventures",
+    "email": "hello@bullishventures.com",
+    "url": "https://bullishventures.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/bullish-ventures/nedb-node/issues"
+  },
+  "engines": {
+    "node": ">= 4.6.0"
+  },
+  "scripts": {
+    "publish": "git push origin --tags && npm run changelog && git push origin",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "lint": "semistandard src/**/*.js test/**/*.js --fix",
+    "mocha": "mocha --opts mocha.opts",
+    "coverage": "istanbul cover _mocha -- --opts mocha.opts",
+    "test": "npm run compile && npm run lint && npm run coverage"
+  },
+  "semistandard": {
+    "sourceType": "module",
+    "env": [
+      "mocha"
+    ]
+  },
+  "directories": {
+    "src": "src"
+  },
+  "dependencies": {
+    "nedb-core": "^3.0.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^3.2.0",
+    "semistandard": "^10.0.0"
+  }
+}
